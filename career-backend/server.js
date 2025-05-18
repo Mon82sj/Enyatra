@@ -14,31 +14,24 @@ const multer = require("multer");
 const app = express();
 app.use(express.json());
 
-// CORS configuration
-const corsOptions = {
-  origin: "http://localhost:5173",
-
-  credentials: true,
-};
-app.use(cors(corsOptions));
-
-
 const allowedOrigins = [
-  'http://localhost:5173',
-  'https://enyatra-monica-gs-projects.vercel.app', // ✅ Add your Vercel frontend URL
-  'https://enyatra.vercel.app/login',
+  "http://localhost:5173", // for local dev
+  "https://enyatra.vercel.app", // ✅ your live frontend URL
 ];
 
-app.use(cors({
+const corsOptions = {
   origin: function (origin, callback) {
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
-      callback(new Error('Not allowed by CORS'));
+      callback(new Error("Not allowed by CORS"));
     }
   },
-  credentials: true,
-}));
+  credentials: true, // if using cookies
+};
+
+app.use(cors(corsOptions));
+
 
 // Set COEP headers globally (optional but safe for all)
 app.use("/uploads", (req, res, next) => {
