@@ -1,0 +1,162 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+.meeting-card {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+  }
+  
+  .red {
+    background-color: red;
+    animation: blink 1s linear infinite;
+  }
+  
+  .yellow {
+    background-color: yellow;
+  }
+  
+  .green {
+    background-color: green;
+  }
+  
+  .gray {
+    background-color: gray;
+  }
+  
+  @keyframes blink {
+    0% {
+      background-color: red;
+    }
+    50% {
+      background-color: darkred;
+    }
+    100% {
+      background-color: red;
+    }
+  }
+  
+/*   
+  .grid-cell {
+    background-color: #f0f0f0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 40px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .grid-cell:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .disabled {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
+  button {
+    width: 100%;
+    margin-top: 10px;
+  }
+   */
+
+
+   .strikethrough {
+    text-decoration: line-through;
+    background-color: #e0f7fa;
+  }
+  
+
+  .App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .waveform-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 3px;
+    height: 100px;
+    margin-top: 2rem;
+  }
+  
+  .waveform-bar {
+    width: 5px;
+    height: 5px;
+    animation: wave-animation 1.8s infinite ease-out;
+    border-radius: 5px;
+    margin-left: 2px;
+  }
+  
+  @keyframes wave-animation {
+    0% {
+      height: 1px;
+    }
+    10%{
+      height:15px;
+    }
+    100%{
+      height:6px;
+    }
+    50% {
+      height: 0px;
+    }
+    70%{
+      height:40px;
+    }
+  }
+  
+  /* Rainbow colors for waves */
+  .wave-0 { background: rgb(11, 2, 54); animation-delay: 0.4s; }
+  .wave-1 { background: rgb(1, 35, 147); animation-delay: 0.35s; }
+  .wave-2 { background: rgb(15, 0, 225); animation-delay: 0.3s; }
+  .wave-3 { background: rgb(4, 49, 249); animation-delay: 0.25s; }
+  .wave-4 { background: rgb(22, 92, 245); animation-delay: 0.2s; }
+  .wave-5 { background: rgb(1, 170, 242); animation-delay: 0.15s; }
+  .wave-6 { background: rgb(6, 227, 251); animation-delay: 0.1s; }
+  .wave-7 { background: rgb(14, 243, 255); animation-delay: 0.05s; }
+  .wave-8 { background: rgb(0, 255, 238); animation-delay: 0.1s; }
+  .wave-9 { background: rgb(35, 221, 235); animation-delay: 0.15s; }
+  .wave-10 { background: rgb(19, 250, 231); animation-delay: 0.2s; }
+  .wave-11 { background: rgb(28, 199, 247); animation-delay: 0.25s; }
+  .wave-12 { background: rgb(24, 71, 244); animation-delay: 0.4s; }
+  .wave-13 { background: rgb(2, 11, 186); animation-delay: 0.45s; }
+  /* Repeat for additional waves if needed */
+  

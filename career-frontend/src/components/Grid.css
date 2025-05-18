@@ -1,0 +1,90 @@
+/* Grid.css */
+.nonogram-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    overflow-x: auto;
+  }
+  
+  .nonogram-grid {
+    display: grid;
+    gap: 3px;
+    justify-content: center;
+    background-color: #f0f9ff;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+  }
+  
+  .cell {
+    width: 42px;
+    height: 42px;
+    border: 2px solid #93c5fd;
+    background-color: #eff6ff;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s ease-in-out;
+    user-select: none;
+    border-radius: 6px;
+  }
+  
+  .cell.filled {
+    background: linear-gradient(135deg, #1e40af, #2563eb);
+    color: white;
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.3);
+  }
+  
+  .cell.x-mark {
+    color: crimson;
+    font-size: 24px;
+  }
+  
+  .cell:hover {
+    background-color: #dbeafe;
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .clue-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: bold;
+    color: #1e3a8a;
+    padding: 4px 6px;
+    background-color: #dbeafe;
+    border-radius: 6px;
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.05);
+    white-space: nowrap;
+  }
+  
+  .clue-cell span {
+    display: block;
+    margin: 1px 0;
+    padding: 2px 6px;
+    background: #93c5fd;
+    border-radius: 4px;
+  }
+  
+  .clue-cell:hover {
+    transform: scale(1.05);
+    background-color: #bfdbfe;
+  }
+  
+  /* Fix for horizontal clues */
+  .horizontal-clue {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  .horizontal-clue span {
+    margin: 0 2px;
+  }
+  
