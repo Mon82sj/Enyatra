@@ -26,6 +26,7 @@ app.use(cors(corsOptions));
 const allowedOrigins = [
   'http://localhost:5173',
   'https://enyatra-monica-gs-projects.vercel.app', // ✅ Add your Vercel frontend URL
+  'https://enyatra.vercel.app/login',
 ];
 
 app.use(cors({
