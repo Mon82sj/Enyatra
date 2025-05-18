@@ -14,7 +14,7 @@ const LoginPage = () => {
 
   const loginUser = async () => {
     try {
-      const res = await axios.post("http://localhost:5000/api/login", user);
+      const res = await axios.post("https://enyatra.onrender.com/api/login", user);
       localStorage.setItem("user", JSON.stringify(res.data.user));
       navigate("/dashboard");
     } catch (error) {
