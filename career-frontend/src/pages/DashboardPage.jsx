@@ -28,7 +28,7 @@
 
 //   const fetchVerifiedParent = async (childId) => {
 //     try {
-//       const response = await axios.get(`http://localhost:5000/api/get-parent/${childId}`);
+//       const response = await axios.get(`https://enyatra.onrender.com/api/get-parent/${childId}`);
 //       setVerifiedParent(response.data);
 //     } catch (error) {
 //       console.error("Error fetching verified parent details:", error);
@@ -37,7 +37,7 @@
 
 //   const fetchVerifiedChild = async (parentId) => {
 //     try {
-//       const response = await axios.get(`http://localhost:5000/api/get-verified-child/${parentId}`);
+//       const response = await axios.get(`https://enyatra.onrender.com/api/get-verified-child/${parentId}`);
 //       setVerifiedChild(response.data);
 //     } catch (error) {
 //       console.error("Error fetching verified child details:", error);
@@ -46,7 +46,7 @@
 
 //   const handleRequestApproval = async () => {
 //     try {
-//       const res = await axios.post("http://localhost:5000/api/verify-parent", {
+//       const res = await axios.post("https://enyatra.onrender.com/api/verify-parent", {
 //         parentEmail: user.email,
 //         childEmail,
 //       });
@@ -69,7 +69,7 @@
 //     useEffect(() => {
 //       async function fetchMeetings() {
 //         try {
-//           const response = await fetch('http://localhost:5000/api/get-all-meetings'); // Replace with your actual API endpoint
+//           const response = await fetch('https://enyatra.onrender.com/api/get-all-meetings'); // Replace with your actual API endpoint
   
 //           if (!response.ok) {
 //             throw new Error(`Error: ${response.status} ${response.statusText}`);
@@ -319,7 +319,7 @@ const Dashboard = () => {
 
   const fetchVerifiedParent = async (childId) => {
     try {
-      const { data } = await axios.get(`http://localhost:5000/api/get-parent/${childId}`);
+      const { data } = await axios.get(`https://enyatra.onrender.com/api/get-parent/${childId}`);
       setVerifiedParent(data);
     } catch (err) {
       console.error("Error fetching parent:", err);
@@ -328,7 +328,7 @@ const Dashboard = () => {
 
   const fetchVerifiedChild = async (parentId) => {
     try {
-      const { data } = await axios.get(`http://localhost:5000/api/get-verified-child/${parentId}`);
+      const { data } = await axios.get(`https://enyatra.onrender.com/api/get-verified-child/${parentId}`);
       setVerifiedChild(data);
     } catch (err) {
       console.error("Error fetching child:", err);
@@ -337,7 +337,7 @@ const Dashboard = () => {
 
   const handleRequestApproval = async () => {
     try {
-      const res = await axios.post("http://localhost:5000/api/verify-parent", {
+      const res = await axios.post("https://enyatra.onrender.com/api/verify-parent", {
         parentEmail: user.email,
         childEmail,
       });
@@ -357,7 +357,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchMeetings = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/get-all-meetings");
+        const res = await fetch("https://enyatra.onrender.com/api/get-all-meetings");
         const data = await res.json();
         setTeacherMeetings(data.meetings);
       } catch (err) {
